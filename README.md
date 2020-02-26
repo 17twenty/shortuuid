@@ -1,7 +1,7 @@
 # shortuuid
 
 *Note: This library was ported from the original github.com/lithammer/shortuuid/v3 repo*
-*This library eshews the Google UUID library and uses the gofrs version*
+*This library eschews the Google UUID library and uses the gofrs version*
 
 A Go library that generates concise, unambiguous, URL-safe UUIDs. Based on and
 compatible with the Python library
