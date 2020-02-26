@@ -1,5 +1,5 @@
-module github.com/lithammer/shortuuid/v3
-
-require github.com/google/uuid v1.1.1
+module github.com/17twenty/shortuuid
 
 go 1.13
+
+require github.com/gofrs/uuid v3.2.0+incompatible

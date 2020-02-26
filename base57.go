@@ -6,7 +6,7 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/google/uuid"
+	"github.com/gofrs/uuid"
 )
 
 type base57 struct {
@@ -35,7 +35,7 @@ func (b base57) Decode(u string) (uuid.UUID, error) {
 	if err != nil {
 		return uuid.Nil, err
 	}
-	return uuid.Parse(str)
+	return uuid.FromString(str)
 }
 
 // numToString converts a number a string using the given alpabet.

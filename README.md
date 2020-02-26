@@ -1,7 +1,7 @@
 # shortuuid
 
-[![Build Status](https://github.com/lithammer/shortuuid/workflows/CI/badge.svg)](https://github.com/lithammer/shortuuid/actions)
-[![Godoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/lithammer/shortuuid)
+*Note: This library was ported from the original github.com/lithammer/shortuuid/v3 repo*
+*This library eshews the Google UUID library and uses the gofrs version*
 
 A Go library that generates concise, unambiguous, URL-safe UUIDs. Based on and
 compatible with the Python library
@@ -10,7 +10,7 @@ compatible with the Python library
 Often, one needs to use non-sequential IDs in places where users will see them,
 but the IDs must be as concise and easy to use as possible. shortuuid solves
 this problem by generating UUIDs using
-[google/uuid](https://github.com/google/uuid) and then translating them to
+[google/uuid](https://github.com/gofrs/uuid) and then translating them to
 base57 using lowercase and uppercase letters and digits, and removing
 similar-looking characters such as l, 1, I, O and 0.
 
@@ -22,7 +22,7 @@ package main
 import (
     "fmt"
 
-    "github.com/lithammer/shortuuid/v3"
+    "github.com/17twenty/shortuuid"
 )
 
 func main() {
@@ -53,8 +53,8 @@ package main
 import (
     "fmt"
     "github.com/btcsuite/btcutil/base58"
-    "github.com/lithammer/shortuuid/v3"
-    "github.com/satori/go.uuid"
+    "github.com/17twenty/shortuuid"
+    "github.com/gofrs/uuid"
 )
 
 type base58Encoder struct {}
@@ -75,4 +75,4 @@ func main() {
 
 ## License
 
-MIT
+MIT as the original
